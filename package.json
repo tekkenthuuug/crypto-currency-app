@@ -1,0 +1,22 @@
+{
+  "name": "crypto-app",
+  "version": "0.1.0",
+  "description": "App for monitoring crypto currency",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . crypto-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/btc.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Crypto app\"",
+    "package-linux": "electron-packager . crypto-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "author": "Maksim Pautsina",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-packager": "^14.2.1",
+    "eslint": "^6.8.0",
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
